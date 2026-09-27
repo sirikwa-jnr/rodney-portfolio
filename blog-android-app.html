@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building My First Android App with Java & Android Studio | Rodney Achota</title>
+  <meta name="description" content="How I built my first Android application with Java and Android Studio — from installing the IDE to running it on a real device." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    .article { max-width: 780px; margin: 0 auto; }
+    .article h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    .article .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; }
+    .article h2 { margin-top: 32px; color: var(--primary-2); font-size: 1.3rem; }
+    .article p, .article li { color: var(--muted); margin-bottom: 14px; font-size: 1rem; line-height: 1.75; }
+    .article ul { padding-left: 22px; }
+    .article strong { color: var(--text); }
+    .article code { background: var(--bg-2); padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; color: var(--accent); }
+    .article blockquote { border-left: 3px solid var(--primary-2); padding-left: 16px; font-style: italic; color: var(--text); margin: 20px 0; }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Rodney<span>.dev</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <a href="contact.html" class="btn btn-outline">Hire Me</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <article class="article">
+      <a href="blog.html" style="color: var(--primary-2); font-size: 0.9rem;">← Back to Blog</a>
+      <h1>Building My First Android App with Java & Android Studio</h1>
+      <p class="meta">By Rodney Achota · July 2026 · 5 min read</p>
+
+      <p>Before July 2026, I had written Java for class assignments and small console programs. But building an Android app is a different world — you have layouts, activities, Gradle, permissions, emulators and real devices all talking to each other.</p>
+
+      <p>Here's how I built <strong>MyStudentProfile</strong>, my first Android app, and what I learned along the way.</p>
+
+      <h2>Step 1: Installing Android Studio</h2>
+      <p>Android Studio is the official IDE for Android development. It's built on IntelliJ IDEA and comes with the Android SDK, an emulator, and everything you need to build, test and ship apps.</p>
+
+      <h2>Step 2: Understanding the Project Structure</h2>
+      <ul>
+        <li><code>app/java</code> — Java code (Activities, Adapters, Models)</li>
+        <li><code>app/res/layout</code> — XML files that define your screens</li>
+        <li><code>app/res/drawable</code> — images and vector assets</li>
+        <li><code>AndroidManifest.xml</code> — declares activities, permissions and app metadata</li>
+        <li><code>build.gradle</code> — dependencies and build configuration</li>
+      </ul>
+      <p>Once you understand that <strong>Java handles logic and XML handles layout</strong>, it clicks.</p>
+
+      <h2>Step 3: Designing the UI</h2>
+      <p>I used XML layouts with <code>ConstraintLayout</code>. I added <code>TextView</code>, <code>EditText</code>, <code>ImageView</code> and <code>Button</code> components, gave them IDs, and referenced them in Java.</p>
+
+      <h2>Step 4: Writing the Logic in Java</h2>
+      <p>In my <code>MainActivity.java</code>, I used <code>setContentView()</code>, <code>findViewById()</code>, click listeners, input validation, and displayed results.</p>
+
+      <h2>Step 5: Running on a Real Device</h2>
+      <p>I enabled <strong>Developer Options</strong> and <strong>USB Debugging</strong>, connected my Android device via USB, and clicked <strong>Run</strong>. Watching my app open on my own phone was one of the best moments of my training.</p>
+
+      <h2>Where the Code Lives</h2>
+      <p>You can find the project on my GitHub: <a href="https://github.com/sirikwa-jnr/MyStudentProfilee" target="_blank" style="color: var(--primary-2);">github.com/sirikwa-jnr/MyStudentProfilee</a></p>
+
+      <h2>Final Thoughts</h2>
+      <p>Android development is not easy, but it is learnable. Build one small app. That's how it starts.</p>
+
+      <p style="margin-top: 40px;">— Rodney Achota</p>
+      <a href="blog.html" style="color: var(--primary-2);">← Back to Blog</a>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Rodney Achota</p>
+    <div class="footer-socials">
+      <a href="https://github.com/sirikwa-jnr" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rodney-achota-b06263335" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/szoboszlairodney" target="_blank">Instagram</a>
+      <a href="https://wa.me/254748725483" target="_blank">WhatsApp</a>
+      <a href="mailto:achotarodney@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

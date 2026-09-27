@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What I Learned During My 2-Month Industrial Training | Rodney Achota</title>
+  <meta name="description" content="Seven IT modules, one data center, and practical lessons in PC repair, system administration, databases, networking, web and Android development." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    .article { max-width: 780px; margin: 0 auto; }
+    .article h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    .article .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; }
+    .article h2 { margin-top: 32px; color: var(--primary-2); font-size: 1.3rem; }
+    .article p, .article li { color: var(--muted); margin-bottom: 14px; font-size: 1rem; line-height: 1.75; }
+    .article ul { padding-left: 22px; }
+    .article strong { color: var(--text); }
+    .article blockquote { border-left: 3px solid var(--primary-2); padding-left: 16px; font-style: italic; color: var(--text); margin: 20px 0; }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Rodney<span>.dev</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <a href="contact.html" class="btn btn-outline">Hire Me</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <article class="article">
+      <a href="blog.html" style="color: var(--primary-2); font-size: 0.9rem;">← Back to Blog</a>
+      <h1>What I Learned During My 2-Month Industrial Training</h1>
+      <p class="meta">By Rodney Achota · May – July 2026 · 6 min read</p>
+
+      <p>From May 5 to July 3, 2026, I undertook a two-month industrial training at Kaimosi Friends University under the supervision of Dr. Lilian Ronoh. It was one of the most practical experiences of my BSc Information Technology journey — and it changed how I think about technology.</p>
+
+      <p>Here's what I learned, module by module.</p>
+
+      <h2>Module 1: PC Repair & Maintenance</h2>
+      <p>We started with hardware. I learned how to open a computer, identify every component on the motherboard, and diagnose faults from symptoms. A machine that won't power on usually has a power issue. A slow machine usually has RAM, storage or malware problems. Overheating is almost always dust.</p>
+      <p>I also installed Ubuntu Linux inside a VirtualBox VM on my Windows machine — my first real taste of virtualization. The biggest takeaway: <strong>preventive maintenance saves more time than repair</strong>.</p>
+
+      <h2>Module 2: System Administration & the KAFU Data Center</h2>
+      <p>This was eye-opening. We visited the university data center and assessed real production infrastructure:</p>
+      <ul>
+        <li>Servers for ERP, Portal, Koha, ODEL and BBB — some of them experienced an outage due to undervoltage</li>
+        <li>Networking equipment with approximately 96% internet availability and ~210 Mbps average speed</li>
+        <li>Storage systems ranging from 1 TB to 3 TB per server</li>
+        <li>Cooling, UPS, voltage regulators, backup generator and solar battery systems</li>
+        <li>CCTV, biometric access and firewalls for security</li>
+      </ul>
+      <p>I learned that a data center is not just about computers — it's about <strong>power, cooling, security and backup working together</strong>. Daily backups go to KENET and KONSA, with KONSA backing up about 30 minutes after KENET.</p>
+
+      <h2>Module 3: Database Management Systems</h2>
+      <p>Under Mr. Mutua Jackson, I worked with Microsoft SQL Server Management Studio. I created users, assigned permissions, designed tables with primary and foreign keys, wrote SQL queries, and practiced backup, restoration, monitoring and encryption.</p>
+      <blockquote>Security is not a feature you add later — it's part of how you design a database from day one.</blockquote>
+
+      <h2>Module 4: Network Administration & Management</h2>
+      <p>Mdm. Irene introduced us to Cisco Packet Tracer, where I built network topologies, configured IP addresses, and tested device communication. I also learned VLANs, MAC/IP addressing, and — best of all — physically built and terminated Ethernet cables in the lab.</p>
+
+      <h2>Module 5: Industrial Visit to Nairobi</h2>
+      <p>We visited <strong>Computers for Schools Kenya (CFSK)</strong> and <strong>Strathmore University's iLabAfrica</strong>. At CFSK, I learned how e-waste is managed: sorting, recycling, battery recovery, and safe disposal using tools like the "Bulb Eater". At Strathmore, I saw how ICT research becomes real innovation.</p>
+
+      <h2>Module 6: Web Systems & Technologies</h2>
+      <p>This was my favorite module. Mr. Dennis taught us web hosting, domains, and Content Management Systems — especially Joomla. I built a personal portfolio website using Joomla on XAMPP, running locally at <code>localhost/joomla</code>. That project is what inspired me to build the portfolio you're reading now.</p>
+
+      <h2>Module 7: Software Development (Mobile Programming)</h2>
+      <p>The final week was all about Android. I installed Android Studio, created my first mobile app, and ran it on my own phone. We also presented group app ideas and peer-evaluated each other — which taught me that <strong>feedback is part of building</strong>, not an afterthought.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Two months, seven modules, one data center, two industrial visits, and a portfolio website. I walked in curious. I walked out with hands-on skills in PC repair, system administration, databases, networking, web development and Android programming.</p>
+      <p>If you're a student about to start industrial training, my advice is simple: <strong>volunteer for the hands-on tasks</strong>. That's where the real learning happens.</p>
+
+      <p style="margin-top: 40px;">— Rodney Achota</p>
+
+      <a href="blog.html" style="color: var(--primary-2);">← Back to Blog</a>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Rodney Achota</p>
+    <div class="footer-socials">
+      <a href="https://github.com/sirikwa-jnr" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rodney-achota-b06263335" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/szoboszlairodney" target="_blank">Instagram</a>
+      <a href="https://wa.me/254748725483" target="_blank">WhatsApp</a>
+      <a href="mailto:achotarodney@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why I Started Using Docker in VS Code for My Projects | Rodney Achota</title>
+  <meta name="description" content="How Docker containers changed the way I develop, test and share my To-Do List and Calendar apps in VS Code." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    .article { max-width: 780px; margin: 0 auto; }
+    .article h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    .article .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 30px; }
+    .article h2 { margin-top: 32px; color: var(--primary-2); font-size: 1.3rem; }
+    .article p, .article li { color: var(--muted); margin-bottom: 14px; font-size: 1rem; line-height: 1.75; }
+    .article ul { padding-left: 22px; }
+    .article strong { color: var(--text); }
+    .article code { background: var(--bg-2); padding: 2px 6px; border-radius: 4px; font-size: 0.9rem; color: var(--accent); }
+    .article pre { background: var(--bg-2); border: 1px solid var(--border); padding: 16px; border-radius: 10px; overflow-x: auto; font-size: 0.85rem; color: var(--accent); margin-bottom: 20px; }
+    .article blockquote { border-left: 3px solid var(--primary-2); padding-left: 16px; font-style: italic; color: var(--text); margin: 20px 0; }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">Rodney<span>.dev</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <a href="contact.html" class="btn btn-outline">Hire Me</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <article class="article">
+      <a href="blog.html" style="color: var(--primary-2); font-size: 0.9rem;">← Back to Blog</a>
+      <h1>Why I Started Using Docker in VS Code for My Projects</h1>
+      <p class="meta">By Rodney Achota · 2026 · 5 min read</p>
+
+      <p>When I built my To-Do List app and my Calendar app, I did something that changed how I develop: I ran them inside <strong>Docker containers</strong>, developed in <strong>VS Code</strong>, and kept everything reproducible on any machine.</p>
+
+      <h2>The Problem Docker Solves</h2>
+      <p>Before Docker, every project came with the classic question: <em>"It works on my machine — why not yours?"</em> Docker packages your app <strong>and its entire environment</strong> into a single container.</p>
+
+      <h2>What I Actually Did</h2>
+      <p>For each project, I created a small <code>Dockerfile</code> and a <code>docker-compose.yml</code> inside VS Code. Then I used the <strong>Dev Containers</strong> extension to develop inside the container.</p>
+
+      <pre>
+# Dockerfile (simplified)
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+      </pre>
+
+      <pre>
+# docker-compose.yml (simplified)
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      </pre>
+
+      <p>From VS Code, I just run:</p>
+      <pre>docker compose up --build</pre>
+      <p>And the app runs — identically, every time.</p>
+
+      <h2>Why This Changed My Workflow</h2>
+      <ul>
+        <li><strong>Consistency:</strong> Same environment on any machine</li>
+        <li><strong>Isolation:</strong> One project's dependencies don't break another's</li>
+        <li><strong>Clean machine:</strong> No global installs — everything lives in the container</li>
+        <li><strong>Easy sharing:</strong> A teammate only needs the repo and Docker</li>
+        <li><strong>Closer to production:</strong> Vercel, Railway and AWS all speak Docker</li>
+      </ul>
+
+      <blockquote>Docker doesn't just run my code — it documents the environment my code needs.</blockquote>
+
+      <h2>What I Plan Next</h2>
+      <ul>
+        <li>Publish the To-Do List and Calendar projects on GitHub with Dockerfiles</li>
+        <li>Deploy them to a cloud provider that supports Docker</li>
+        <li>Learn Kubernetes (the next logical step)</li>
+      </ul>
+
+      <p style="margin-top: 40px;">— Rodney Achota</p>
+      <a href="blog.html" style="color: var(--primary-2);">← Back to Blog</a>
+    </article>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Rodney Achota</p>
+    <div class="footer-socials">
+      <a href="https://github.com/sirikwa-jnr" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/rodney-achota-b06263335" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/szoboszlairodney" target="_blank">Instagram</a>
+      <a href="https://wa.me/254748725483" target="_blank">WhatsApp</a>
+      <a href="mailto:achotarodney@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

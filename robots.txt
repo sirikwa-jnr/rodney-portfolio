@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rodneyachota.com/sitemap.xml
